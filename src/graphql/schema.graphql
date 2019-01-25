@@ -1,0 +1,6 @@
+type Note @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  note: String!
+}
+
+# can also give access to groups with {allow: groups: ["admin"]}
